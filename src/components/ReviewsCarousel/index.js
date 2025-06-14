@@ -34,7 +34,7 @@ class ReviewsCarousel extends Component {
     const currentReview = reviewsList[currentIndex]
     return (
       <div className="carousel-container">
-        <h1 className="carousel-heading">Reviews</h1>
+        <h1 className="carousel-heading">Review</h1>
         <div className="review-card">
           <img
             src={currentReview.imgUrl}
@@ -46,7 +46,6 @@ class ReviewsCarousel extends Component {
             <button
               type="submit"
               onClick={this.onLeftArrow}
-              data-testid="leftArrow"
               className="arrow-button"
             >
               <img
@@ -55,12 +54,9 @@ class ReviewsCarousel extends Component {
                 className="arrow"
               />
             </button>
-            <p className="username" data-testid="username">
-              {currentReview.username}
-            </p>
+            <p className="username">{currentReview.username}</p>
             <button
               type="submit"
-              data-testid="rightArrow"
               onClick={this.onRightArrow}
               className="arrow-button"
             >
